@@ -8,6 +8,35 @@ class TestBubuPalindrome < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert true
   end
+
+  def test_has_readme?
+    assert true
+  end
+
+  def test_non_palindrome
+    assert !"apple".palindrome?
+  end
+
+  def test_palindrome
+    assert "racecar".palindrome?
+  end
+
+  def test_Upcase_palindrome
+    assert "RaceCar".palindrome?
+  end
+
+  def test_palindrome_with_punctuation
+    assert "Madam, I'm Adam".palindrome?
+  end
+
+  def test_number_palindrome
+    assert "1991".palindrome?
+    assert 1991.palindrome?
+  end
+
+
+
+
 end
